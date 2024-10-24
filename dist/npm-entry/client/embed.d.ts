@@ -1,0 +1,24 @@
+import type { CampaignParams, ResetParams, StartOptions, WindowInfo } from "@ada-support/embed-types";
+import { MessageService } from "client/lib/message-service";
+import { StoreProxy } from "client/lib/store-proxy";
+import "client/lib/error-tracker";
+import type { MetaFieldPayload } from "common/types/store";
+export declare function createEmbed(adaSettings: StartOptions): {
+    readonly initialized: Promise<void>;
+    readonly messageService: MessageService;
+    readonly store: StoreProxy;
+    readonly adaSettings: StartOptions;
+    readonly getInfo: () => Promise<WindowInfo>;
+    readonly setMetaFields: (options: MetaFieldPayload) => Promise<void>;
+    readonly setSensitiveMetaFields: (options: MetaFieldPayload) => Promise<void>;
+    readonly stop: () => Promise<void>;
+    readonly deleteHistory: () => Promise<void>;
+    readonly reset: (resetParams?: ResetParams) => Promise<void>;
+    readonly trackEvent: (eventKey: string, value: number, meta?: {}) => Promise<void>;
+    readonly triggerCampaign: (campaignKey: string, triggerCampaignParams?: {}) => Promise<void>;
+    readonly evaluateCampaignConditions: (options: CampaignParams) => Promise<void>;
+    readonly createProactive: (body: string, duration: number, responseId?: string) => Promise<void>;
+    readonly closeCampaign: () => Promise<void>;
+    readonly setDeviceToken: (token: string) => Promise<void>;
+};
+export declare type Embed = ReturnType<typeof createEmbed>;

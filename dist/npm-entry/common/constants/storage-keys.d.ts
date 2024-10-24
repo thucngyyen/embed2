@@ -1,0 +1,11 @@
+export declare const CHATTER_TOKEN_STORAGE_KEY = "chatter";
+export declare const CHATTER_CREATED_STORAGE_KEY = "ada-embed_chatter-created";
+export declare const SESSION_AUTH_TOKEN_STORAGE_KEY = "ada-embed_session-token";
+export declare const IN_LIVE_CHAT_STORAGE_KEY = "inLiveChat";
+export declare const ZD_SESSION_STORAGE_KEY = "ada-embed_zd-session-id";
+export declare const ZD_PREVIOUS_TAGS_STORAGE_KEY = "ada-embed_zd-previous-tags";
+export declare const IS_DRAWER_OPEN_STORAGE_KEY = "ada-embed_is-drawer-open";
+export declare const ZD_MESSAGING_EXTERNAL_USER_ID_STORAGE_KEY = "ada-embed_zd-messaging-external-user-id";
+export declare const ZD_MESSAGING_CHATTER_CREATED_STORAGE_KEY = "ada-embed_zd-messaging-chatter-created";
+/** @deprecated - Use CHATTER_TOKEN_STORAGE_KEY */
+export declare const CHATTER_STORAGE_KEY = "chatter";
